@@ -10,6 +10,23 @@
     <img src="../static/faiz.jpg", alt="Photo not found">
     <h1>Hello {{my_name}}</h1>
     <h2>{{my_name_letters}}</h2>
+    <h1>{{numeric_list}}</h1>
 
+    <ul>
+        {% for item in numeric_list %}
+        <li>{{item}}</li>
+        {% endfor %}
+    </ul>
+    {% if 40 in numeric_list %}
+    <p>your lucky number is 40</p>
+    {% else %}
+    <p>Try again letter</p>
+    {% endif %}
+
+    {% if user_status %}
+    <p>Wlcome to our site you are now logged in </p>
+    {% else %}
+    <p>Please log in</p>
+    {% endif %}
 </body>
 </html>
